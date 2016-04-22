@@ -16,9 +16,13 @@
     	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-       
+        <style>
+            #signup:hover{
+                color:#ff8000;
+            }
+        </style>
 	</head>
-	<body>
+	<body style="background-color:#eee">
 		<nav class="navbar navbar-custom1 navbar-fixed-top" role="navigation" style="background-color:#ff8000">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -88,10 +92,11 @@
                                     <input type="submit" name="submit" class="btn btn-block btn-warning" value="Sign In">
                                 </form>
                             </div>
+                            <p>Need an account? <a href="signup.php" id="signup">Sign Up</a></p>
                         </div>
                     </div>            
 
-
+        </div>
         <!-- Javascript -->
         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

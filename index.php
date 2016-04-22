@@ -16,9 +16,23 @@
     	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-
+		<style>
+			 #map {
+        height: 100%;
+      }
+		</style>
         <script>
+       		function showmap(){
+       			var map = new google.maps.Map(document.getElementById('map'), {
+          			zoom: 13,
+          			center: {lat: 34.04924594193164, lng: -118.24104309082031}
+        		});
+
+		        var trafficLayer = new google.maps.TrafficLayer();
+    		    trafficLayer.setMap(map);
+        	}
             function helpText(position){
+            	 
             	var i=0;
             	while(i<5){
 	                responsiveVoice.speak("I need help. My Location is "+Math.round(position.coords.latitude,3)+" degree north and "+Math.round(position.coords.longitude,3)+" degree east. Please help me.");
@@ -32,9 +46,19 @@
        				x.innerHTML = "Geolocation is not supported by this browser.";
     			}
 			}
+			function getLocation1() {
+    			if (navigator.geolocation) {
+        			navigator.geolocation.getCurrentPosition(showmap);
+    			} else {
+       				x.innerHTML = "Geolocation is not supported by this browser.";
+    			}
+			}
         </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeg99ycewtXk7BfhY0tkDOt82ModfKUng&callback=initMap">
+    </script>
 	</head>
-	<body>
+	<body style="background-color:#eee">
 		<nav class="navbar navbar-custom1 navbar-fixed-top" role="navigation" style="background-color:#ff8000">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -75,6 +99,12 @@
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
 			    <a class="btn btn-default btn-block btn-large" href="videos.php">Videos <i class="fa fa-video-camera" aria-hidden="true"></i></a>
+			</div>
+			<div class="col-sm-6" style="margin-top:10px">
+			    <a class="btn btn-default btn-block btn-large" onclick="showmap()">See the Traffic on Road</a>
+			</div>
+			<div class="col-sm-12">
+				<div id="map" style="width:100%;height:50%;margin-top:30px"></div>
 			</div>
 		</div>	
 		<script src="bootstrap/js/jquery.js"></script>

@@ -16,14 +16,7 @@
     	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-
-        <script>
-            function helpText(){
-                responsiveVoice.speak("I need help. My Location is 29 degree north and 45 degree east.")
-            }
-
-        </script>
+       
 	</head>
 	<body>
 		<nav class="navbar navbar-custom1 navbar-fixed-top" role="navigation" style="background-color:#ff8000">
