@@ -5,7 +5,6 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name="description" content="">
     	<meta name="author" content="">
-
    		<title>Women Security</title>
 
     	<!-- Bootstrap Core CSS -->
@@ -16,6 +15,24 @@
     	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+        <script>
+            function helpText(position){
+            	var i=0;
+            	while(i<5){
+	                responsiveVoice.speak("I need help. My Location is "+Math.round(position.coords.latitude,3)+" degree north and "+Math.round(position.coords.longitude,3)+" degree east. Please help me.");
+	            	i++;
+	            }
+            }
+            function getLocation() {
+    			if (navigator.geolocation) {
+        			navigator.geolocation.getCurrentPosition(helpText);
+    			} else {
+       				x.innerHTML = "Geolocation is not supported by this browser.";
+    			}
+			}
+        </script>
 	</head>
 	<body>
 		<nav class="navbar navbar-custom1 navbar-fixed-top" role="navigation" style="background-color:#ff8000">
@@ -25,46 +42,39 @@
                 <a class="navbar-brand" href="index.php" id="brand">Women Security</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div>
+            <!--<div>
                 <ul class="nav navbar-nav">
-                    <!--<li>
-                    	<a href="blog.php">Blog</a>
-                    </li>
-                    <li>
-                        <a href="videos.php">Videos</a>
-                   	</li>-->
                    	<li>
                         <a href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
                     </li>
                 </ul>
-            </div>
+            </div>-->
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
     <!--call button-->
     	<div class="container" style="margin-top:100px">
-    		<!--<div class="jumbotron" style="background-image:">
-  				<h1>Hello, world!</h1>
-  				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-			</div>-->
 		    <div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="tel:+919780443873">Call Near By Police Station</a>
+			    <a class="btn btn-default btn-block btn-large" href="tel:+919780443873" onclick="getLocation()">Call Near By Police Station</a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="tel:+919780443873">Call Your Relatives</a>
+			    <a class="btn btn-default btn-block btn-large" href="tel:+919780443873" onclick="getLocation()">Call Your Relatives</a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="signup.php">Sign Up As a Lawyer</a>
+			    <a class="btn btn-default btn-block btn-large" href="login.php">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+			</div>
+			<div class="col-sm-6" style="margin-top:10px">
+			    <a class="btn btn-default btn-block btn-large" href="signup.php">Sign Up As a Lawyer<i class="fa fa-user-plus" aria-hidden="true"></i></a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
 			    <a class="btn btn-default btn-block btn-large" href="report.php">Report A Case</a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="blog.php">Blog</a>
+			    <a class="btn btn-default btn-block btn-large" href="blog.php">Blog <i class="fa fa-rss-square" aria-hidden="true"></i></a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="videos.php">Videos</a>
+			    <a class="btn btn-default btn-block btn-large" href="videos.php">Videos <i class="fa fa-video-camera" aria-hidden="true"></i></a>
 			</div>
 		</div>	
 		<script src="bootstrap/js/jquery.js"></script>

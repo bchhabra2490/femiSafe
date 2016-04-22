@@ -16,6 +16,7 @@
     	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+       
 	</head>
 	<body>
 		<nav class="navbar navbar-custom1 navbar-fixed-top" role="navigation" style="background-color:#ff8000">
@@ -65,61 +66,41 @@
         </div>
         <!-- /.container -->
     </nav>
-    <!--call button-->
-    <div class="container" style="margin-top:100px">
-	    <!-- 16:9 aspect ratio -->
-        <!--<div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/KX7nsnsBf1Y"></iframe>
-        </div>-->
+       <div class="container" style="margin-top:100px">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h1>Login</h1>
+                                    <?php if(isset($_GET['error']) && $_GET['error']==1){?><span class="alert" style="color:#fff;">Member ID/Password is incorrect.</span><?php } ?>
+                                </div>
+                            </div>
+                            <div class="form-bottom" style="margin-top:40px">
+                                <form role="form" action="home.php" method="post" class="login-form">
+                                    <div class="form-group" style="margin-bottom:20px;margin-top:-15px">
+                                        <label class="sr-only" for="form-username">Username</label>
+                                        <input type="text" name="username" placeholder="Username" class="form-username form-control" id="form-username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-password">Password</label>
+                                        <input type="password" name="password" placeholder="Password" class="form-password form-control" id="form-password">
+                                    </div>
+                                    <input type="submit" name="submit" class="btn btn-block btn-warning" value="Sign In">
+                                </form>
+                            </div>
+                        </div>
+                    </div>            
 
-        <!-- 4:3 aspect ratio -->
-        <h3 style="text-align:center;">Videos on Women Safety</h3>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/KX7nsnsBf1Y"></iframe>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/KX7nsnsBf1Y"></iframe>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/KX7nsnsBf1Y"></iframe>
-                </div>
-            </div>
-        </div>
-	</div>	
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="https://twitter.com/pattefoundation" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://facebook.com/pattefoundation" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy;Women Security</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-		<script src="bootstrap/js/jquery.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-	</body>
-</html>	
+
+        <!-- Javascript -->
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+</body>
+</html>    

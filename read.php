@@ -16,6 +16,14 @@
     	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+        <script>
+            function helpText(){
+                responsiveVoice.speak("I need help. My Location is 29 degree north and 45 degree east.")
+            }
+
+        </script>
 	</head>
 	<body>
 		<nav class="navbar navbar-custom1 navbar-fixed-top" role="navigation" style="background-color:#ff8000">
@@ -96,11 +104,11 @@
                 <hr>
 
                 <!-- Post Content -->
-                <p style="line-height:22px;font-family:sans-serif;font-size:16px;">Here in Pakistan, Mossarat Qadeem, founder of Paiman Trust, is working at the grassroots level with women, such as mothers, and Madrassa teachers, empowering them to take a stand against violent extremism in their communities. She is advocating for a preventative approach to the type of violent tragedy that recently unfolded in Lahore, where the majority of the 70 victims were women and children.
+                <p style="line-height:22px;font-family:sans-serif;font-size:16px;text-align:justify">Here in Pakistan, Mossarat Qadeem, founder of Paiman Trust, is working at the grassroots level with women, such as mothers, and Madrassa teachers, empowering them to take a stand against violent extremism in their communities. She is advocating for a preventative approach to the type of violent tragedy that recently unfolded in Lahore, where the majority of the 70 victims were women and children.
 
 During this year’s Commission on the Status of Women in March, the role of women as “victims” of violent extremist was a contested subject. Many international civil society activists — long active in the women, peace, and security space — are divided on new policy frameworks to counter and prevent violent extremism. Those who do not support efforts to link gender and preventing violence often argue that efforts to engender countering violent extremism (CVE) result in instrumentalizing or securitizing women — making the “women as victims” narrative stronger.
 
-This debate thunders on, making the discussion on gender equality and CVE uniquely contentious and polarizing. International civil society and academics have gone so far as to suggest that policymakers should abandon their efforts to address gender within CVE.
+This debate thunders on, making the discussion on gender equality and CVE uniquely contentious and polarizing. International civil society and academics have gone so far as to suggest that policymakers should abandon their efforts to address gender within CVE.<br><br>
 
 Yet, here in Pakistan, there is no time for esoteric debate, as the fight against violent extremism continues with women like Qadeem in the lead. She and others like her know that women are far more than victims. In Pakistan, women are active in the security sector protecting their communities; leading peaceful movements against violence; and of course, as violent extremists (as illustrated in San Bernardino)
 
@@ -116,13 +124,13 @@ Prevention embraces the gray area, and seeks to understand be guided by it. Acco
 
 There are many that remain unconvinced. Two weeks ago, for example, at the London School of Economics launch of the program on Women, Peace, and Security these critiques took center stage. A keynote speech by Dr. Fionnuala Ní Aoláin cited the “real risks” and “dangers“ of addressing gender within the P/CVE space and called on policymakers to “be wary” of any engagement.
 
-This language is a direct impediment to our collective and inclusive efforts to prevent violence. It is not supportive of women like Qadeem, doing the work on the ground — fully living the nuances that academics tend to gloss over. Policymakers must empower these activists.
+This language is a direct impediment to our collective and inclusive efforts to prevent violence. It is not supportive of women like Qadeem, doing the work on the ground — fully living the nuances that academics tend to gloss over. Policymakers must empower these activists.<br><br>
 
 To continue to ensure women have the resources to do this critical work, we must cooperate to document its relevance and output. On a practical level, this means continuing to invest in research that looks at the critical link between the goals of the international community for gender equality and overarching state stability. Valerie Hudson’s watershed work in this space is a great example of the positive role of academic research in mobilizing quality policy. Not as detractors, but instead as advocates.
 
 Research must engage both the academy as well as policymakers, to ensure strong gender analysis of context. A recent journal article by Sarah Davies provides a strong roadmap. Davies calls for improved contextual gender analysis where sexual and gender-based violence (SGBV) is prevalent. She suggests that in the rush to address SGBV in conflict contexts, we have forgotten the importance of broad gender analysis. As a solution, she advocates for an improved understanding of the structural conditions (gender and social roles) of the family and state.
 
-The problem set (defined by the research) must drive the solutions. In bringing longstanding gender inequalities to light, we learn more about the ways to prevent violent extremism. An excellent new publication from the Global Center rightly points out that without more information on the various roles women play, there is an inadvertent potential to reinforce stereotypes.
+The problem set (defined by the research) must drive the solutions. In bringing longstanding gender inequalities to light, we learn more about the ways to prevent violent extremism. An excellent new publication from the Global Center rightly points out that without more information on the various roles women play, there is an inadvertent potential to reinforce stereotypes.<br><br>
 
 Improved information will also help avoid a propensity towards protection — programming focused solely on women as vulnerable. Moving beyond protection is a core recommendation of the 2015 Global Counterterrorism Forum’s Good Practices on Women and Countering Violent Extremism. The document recommends focusing instead on empowering activities such as livelihood promotion and improved education, based on local needs. For example, Qadeem pointed out to me that over 50 percent of Pakistan’s teachers are women, and that by simply connecting them to civil society advocates, she is building a strong network to stand up against radicalization.
 
@@ -196,28 +204,15 @@ Advocates and academicians must not reject the P/CVE space for fear of its instr
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Share on Facebook</h4>
-                    <div class="input-group">
-                       <div class="fb-like" data-href="http://www.pattefoundation.org/read.php?id=<?php echo $id;?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
 
                 <!-- Blog Categories Well -->
                 <div class="well">
                     <h4>Other Stories</h4>
                     <div class="row">
                         <div class="col-lg-12">
-                            <ul class="list-unstyled">
-                                <?php 
-                                    $sql='select title,id from blog where id!='.$id.' limit 5';
-                                    $result=mysqli_query($db,$sql) or die(mysqli_query($db));
-                                    while($row=mysqli_fetch_assoc($result)){
-                                        echo '<li><a href="read.php?id='.$row['id'].'">'.$row['title'].'</a></li>';
-                                    }
-                                ?>
+                            <ul class="">
+                                <li><a href="read.php?id=2">WOMEN AND PREVENTING VIOLENT EXTREMISM AT THE GRASSROOTS LEVEL</a></li>
+                                <li><a href="read.php?id=3">Learning from Civil Society at CSW60</a></li>
                             </ul>
                         </div>
                     </div>
@@ -234,12 +229,13 @@ Advocates and academicians must not reject the P/CVE space for fear of its instr
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Patte Foundation</p>
+                    <p>Copyright &copy; Women Security</p>
                 </div>
             </div>
             <!-- /.row -->
         </footer>	
 		<script src="bootstrap/js/jquery.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+
 	</body>
 </html>	
