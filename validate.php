@@ -22,6 +22,7 @@
 				$_SESSION['username']=$username;
 				$_SESSION['logged']=1;
 				$_SESSION['level']=$row['level'];
+				$_SESSION['id']=$row['id'];
 				header('Refresh:1;URL=home.php');
 				die();
 			}

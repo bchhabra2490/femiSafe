@@ -1,20 +1,12 @@
-<!--home.php-->
-<!DOCTYPE html>
-<html lang="en">
+
+
+<html>
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Women Security Blog</title>
 
-    <!-- Bootstrap Core CSS -->
-	<!--<link  rel="shortcut icon" href="images/logo.ico" type="image/png"/>-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link href="bootstrap/css/clean-blog.min.css" rel="stylesheet">
     <!--<link href="bootstrap/css/blog-post.css" rel="stylesheet">-->
@@ -70,15 +62,26 @@
     </nav>
     <div class="container" style="margin-top:100px">
     	<?php
-    		if($_SESSION['logged']==0){
-    			?>
-    			<?php
+    		if($_SESSION['level']==1){
+    			$sql='select * from cases where status="0"';
+    			$result=mysqli_query($db,$sql) or die(mysqli_error($db));
+    			$count=mysql_num_rows($result);
+    			echo '<h3>Total '.$count.' case(s) pending.</h3>';
+    			while(mysql_fetch_assoc($result)){
+    				echo '<div class="col-sm-12" style="margin-top:10px"><small>Pending</small><br><p>'.$case_details.'</p></div>';
+    			}
     		}else{
     			?>
-    			<?php
-    		}
-    	?>
-
+    			<div class="col-sm-12">
+    				<h4>Submit the details of Case.</h4>
+	    			<form role="form" action="caseSubmit.php" method="post" class="login-form">
+    	            	<div class="form-group">
+        	        		<label class="sr-only" for="form-password">Details</label>
+           	                <textarea name="details" class="form-password form-control" >Submit the case details</textarea>
+           	    	    </div>
+                    	<input type="submit" name="submit" class="btn btn-block btn-warning" value="Submit">
+                	</form>
+                </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

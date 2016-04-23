@@ -109,8 +109,9 @@
 			    <a class="btn btn-default btn-block btn-large" href="signup.php">Sign Up<i class="fa fa-user-plus" aria-hidden="true"></i></a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="report.php">Report A Case</a>
+			   <a type="button" class="btn btn-default btn-block btn-large" data-toggle="modal" data-target="#myModal">Find Nearby Police Stations</a>
 			</div>
+
 			<div class="col-sm-6" style="margin-top:10px">
 			    <a class="btn btn-default btn-block btn-large" href="blog.php">Blog <i class="fa fa-rss-square" aria-hidden="true"></i></a>
 			</div>
@@ -123,6 +124,25 @@
 			<div class="col-sm-12">
 				<div id="map" style="width:100%;height:50%;margin-top:30px"></div>
 			</div>
+			<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">NearBy Police Stations</h4>
+      </div>
+      <div class="modal-body">
+        <p>Data Not Available</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 		</div>	
 		<script src="bootstrap/js/jquery.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>

@@ -38,6 +38,8 @@
 		}
 		$_SESSION['logged']=1;
 		$_SESSION['username']=$username;
+		$_SESSION['level']=$level;
+		$_SESSION['id']=$id;
 		header('Refresh:0;URL=home.php');
 	}else{
 		header('Refresh:0;URL=signup.php');

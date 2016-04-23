@@ -9,5 +9,9 @@
 	$sql='create table if not exists lawyers(id int primary key,name varchar(100), email varchar(100))';
 	mysqli_query($db,$sql) or die(mysqli_error($db));
 
+
+	$sql='create table if not exists cases(id int primary key,vid int, case_title varchar(200), case_details mediumtext,status enum("0","1") default "0")';
+	mysqli_query($db,$sql) or die(mysqli_error($db));
+
 	echo 'success';
 ?>
