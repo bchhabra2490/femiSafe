@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -85,11 +88,25 @@
 			<div class="col-sm-6" style="margin-top:10px">
 			    <a class="btn btn-default btn-block btn-large" href="tel:+919780443873" onclick="getLocation()">Call Your Relatives</a>
 			</div>
+			<?php
+
+			if(!isset($_SESSION['username'])){
+				?>
 			<div class="col-sm-6" style="margin-top:10px">
 			    <a class="btn btn-default btn-block btn-large" href="login.php">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
 			</div>
+			<?php
+		}else{
+			?>
+
 			<div class="col-sm-6" style="margin-top:10px">
-			    <a class="btn btn-default btn-block btn-large" href="signup.php">Sign Up As a Lawyer<i class="fa fa-user-plus" aria-hidden="true"></i></a>
+			    <a class="btn btn-default btn-block btn-large" href="logout.php">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+			</div>
+			<?php
+				}
+			?>
+			<div class="col-sm-6" style="margin-top:10px">
+			    <a class="btn btn-default btn-block btn-large" href="signup.php">Sign Up<i class="fa fa-user-plus" aria-hidden="true"></i></a>
 			</div>
 			<div class="col-sm-6" style="margin-top:10px">
 			    <a class="btn btn-default btn-block btn-large" href="report.php">Report A Case</a>

@@ -73,7 +73,7 @@
         </div>-->
 
         <!-- 4:3 aspect ratio -->
-        <h3 style="text-align:center;">Videos on Women Safety</h3>
+        <h3 style="text-align:center;">Videos on Women Empowerment</h3>
         <div class="row">
             <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-4by3">
