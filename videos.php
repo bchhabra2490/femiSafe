@@ -82,12 +82,12 @@
             </div>
             <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/KX7nsnsBf1Y"></iframe>
+                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/HS1NAqyOcQ0"></iframe>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/KX7nsnsBf1Y"></iframe>
+                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/m7BocwY5zXo"></iframe>
                 </div>
             </div>
         </div>

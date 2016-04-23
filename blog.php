@@ -89,10 +89,10 @@
          <div class="col-md-4">
             <div class="panel panel-primary">
                 <div class="panel-head">
-                    <h3 style="padding-left:10px">Be Safe</h3>
+                    <h3 style="padding-left:10px">Enough is enough</h3>
                 </div>
                 <div class="panel-body">
-                    <img src="images/blog/1.png" style="float:left;width:300px;padding:5px;" class="img-responsive"/>
+                    <img src="images/blog/2.jpg" style="float:left;width:300px;padding:5px;" class="img-responsive"/>
                     <p class="post-meta">Posted by Bharat Chhabra on 22 April, 2016</p>
                 </div>
                 <div class="panel-footer">
@@ -103,10 +103,10 @@
          <div class="col-md-4">
             <div class="panel panel-primary">
                 <div class="panel-head">
-                    <h3 style="padding-left:10px">Be Safe</h3>
+                    <h3 style="padding-left:10px">Women Safety Secured</h3>
                 </div>
                 <div class="panel-body">
-                    <img src="images/blog/1.png" style="float:left;width:300px;padding:5px;" class="img-responsive"/>
+                    <img src="images/blog/3.jpg" style="float:left;width:300px;padding:5px;" class="img-responsive"/>
                     <p class="post-meta">Posted by Bharat Chhabra on 22 April, 2016</p>
                 </div>
                 <div class="panel-footer">
